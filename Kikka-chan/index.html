@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>/b/ - Random</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        .post { border: 1px solid #ddd; margin: 10px; padding: 15px; }
+        .threads { max-width: 800px; margin: 0 auto; }
+        img.thumb { max-width: 250px; max-height: 250px; }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="threads">
+            <h4>/b/ - Random</h4>
+            
+            <div id="posts"></div>
+            
+            <form id="postForm" onsubmit="return submitPost(event)">
+                <div class="mb-3">
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="file" id="image" accept="image/*" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+                <div id="error" class="text-danger mt-2"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
